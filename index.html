@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Plan App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start">
+        <h2>Meal Plan Decision Tree</h2>
+        <button onclick="showSection('mealPlanChoice')">Start</button>
+    </div>
+
+    <div id="mealPlanChoice" class="hidden">
+        <h3>Are you following a specific meal plan today (1-10)?</h3>
+        <button onclick="showSection('specificMealPlan')">Yes</button>
+        <button onclick="showSection('breakfastDecision')">No</button>
+    </div>
+
+    <div id="specificMealPlan" class="hidden">
+        <h3>Choose a Meal Plan:</h3>
+        <button onclick="showMealPlan(1)">Meal Plan 1</button>
+        <button onclick="showMealPlan(2)">Meal Plan 2</button>
+        <button onclick="showMealPlan(3)">Meal Plan 3</button>
+        <button onclick="showMealPlan(4)">Meal Plan 4</button>
+        <button onclick="showMealPlan(5)">Meal Plan 5</button>
+        <button onclick="showMealPlan(6)">Meal Plan 6</button>
+        <button onclick="showMealPlan(7)">Meal Plan 7</button>
+        <button onclick="showMealPlan(8)">Meal Plan 8</button>
+        <button onclick="showMealPlan(9)">Meal Plan 9</button>
+        <button onclick="showMealPlan(10)">Meal Plan 10</button>
+    </div>
+
+    <div id="mealPlan1" class="hidden meal-plan">
+        <h4>Meal Plan 1</h4>
+        <p><b>Breakfast:</b> Basmati Rice (60g), Chicken Thigh (150g), Olive Oil (5ml)</p>
+        <p><b>Lunch:</b> Spirali Pasta (150g), Tuna (130g), Avocado (30g)</p>
+        <p><b>Dinner:</b> Cooked Potato (250g), Basa Fillets (150g), Cashews (15g), Lettuce (50g), Onion (50g)</p>
+        <p><b>Snacks:</b> Sultana Bran Buds (40g), Soy/Almond Milk (100ml), White Toast (1 slice)</p>
+    </div>
+
+    <div id="mealPlan2" class="hidden meal-plan">
+        <h4>Meal Plan 2</h4>
+        <p><b>Breakfast:</b> Weetbix (52g), Soy and Almond milk (150 ml), 100% egg whites (200g)</p>
+        <p><b>Lunch:</b> Basmati Rice (100g), Chicken thigh (150g), Cashews (20g)</p>
+        <p><b>Dinner:</b> Spirali Pasta (100g), Basa Fillets (200g), Olive Oil (5ml), Broccoli (100g)</p>
+        <p><b>Snacks:</b> White bread (2 slices), Smooth hazelnut spread (15g)</p>
+    </div>
+
+    <div id="mealPlan3" class="hidden meal-plan">
+        <h4>Meal Plan 3</h4>
+        <p><b>Breakfast:</b> Roti (80g), Free Range Eggs (3 eggs), Olive Oil (5ml)</p>
+        <p><b>Lunch:</b> Spirali Pasta (120g), Chicken thigh (180g), Gourd (100g)</p>
+        <p><b>Dinner:</b> Basmati Rice (80g), Tuna (130g), Sweet potato (100g)</p>
+        <p><b>Snacks:</b> Biscuits (30g), Grapes (100g), rice cake (10g)</p>
+    </div>
+
+    <div id="mealPlan4" class="hidden meal-plan">
+        <h4>Meal Plan 4</h4>
+        <p><b>Breakfast:</b> Plain Bagels (100g), 100% egg whites (250g)</p>
+        <p><b>Lunch:</b> Basmati Rice (100g), Basa Fillets (250g), Cashews (20g)</p>
+        <p><b>Dinner:</b> Spirali Pasta (100g), Chicken thigh (150g), Carrots (100g)</p>
+        <p><b>Snacks:</b> Salt Caramel Protein Bar (60g)</p>
+    </div>
+
+    <div id="mealPlan5" class="hidden meal-plan">
+        <h4>Meal Plan 5</h4>
+        <p><b>Breakfast:</b> Wholemeal (2 slices), Free Range Eggs (4 eggs)</p>
+        <p><b>Lunch:</b> Spirali Pasta (130g), Chicken thigh (160g), Green peas (50g)</p>
+        <p><b>Dinner:</b> Basmati Rice (90g), Basa Fillets (200g), Lettuce (100g)</p>
+        <p><b>Snacks:</b> Sultana Bran Buds (50g), Soy and Almond milk (100 ml)</p>
+    </div>
+
+    <div id="mealPlan6" class="hidden meal-plan">
+        <h4>Meal Plan 6</h4>
+        <p><b>Breakfast:</b> Basmati Rice (50g), Chicken thigh (150g), Olive Oil (5ml)</p>
+        <p><b>Lunch:</b> Spirali Pasta (140g), Tuna (130g), Avocado (40g)</p>
+        <p><b>Dinner:</b> Cooked Potato (200g), Basa Fillets (180g), Cashews (10g), Broccoli (80g)</p>
+        <p><b>Snacks:</b> White bread (2 slices), Smooth hazelnut spread (15g)</p>
+    </div>
+
+    <div id="mealPlan7" class="hidden meal-plan">
+        <h4>Meal Plan 7</h4>
+        <p><b>Breakfast:</b> Weetbix (60g), Soy and Almond milk (200ml), 100% egg whites (180g)</p>
+        <p><b>Lunch:</b> Basmati Rice (110g), Chicken thigh (140g), Cashews (25g)</p>
+        <p><b>Dinner:</b> Spirali Pasta (90g), Basa Fillets (220g), Olive Oil (5ml), Onion (70g)</p>
+        <p><b>Snacks:</b> Soft White Toast (2 slices), Smooth hazelnut spread (10g)</p>
+    </div>
+
+    <div id="mealPlan8" class="hidden meal-plan">
+        <h4>Meal Plan 8</h4>
+        <p><b>Breakfast:</b> Roti (90g), Free Range Eggs (2 eggs), Olive Oil (5ml)</p>
+        <p><b>Lunch:</b> Spirali Pasta (110g), Chicken thigh (200g), Gourd (120g)</p>
+        <p><b>Dinner:</b> Basmati Rice (85g), Tuna (130g), Sweet potato (80g)</p>
+        <p><b>Snacks:</b> Biscuits (40g), rice cake (15g)</p>
+    </div>
+
+    <div id="mealPlan9" class="hidden meal-plan">
+        <h4>Meal Plan 9</h4>
+        <p><b>Breakfast:</b> Plain Bagels (120g), 100% egg whites (220g)</p>
+        <p><b>Lunch:</b> Basmati Rice (90g), Basa Fillets (280g), Cashews (15g)</p>
+        <p><b>Dinner:</b> Spirali Pasta (95g), Chicken thigh (160g), Carrots (80g)</p>
+        <p><b>Snacks:</b> Salt Caramel Protein Bar (60g)</p>
+    </div>
+
+    <div id="mealPlan10" class="hidden meal-plan">
+        <h4>Meal Plan 10</h4>
+        <p><b>Breakfast:</b> Wholemeal (2 slices), Free Range Eggs (3 eggs), Olive Oil (5ml)</p>
+        <p><b>Lunch:</b> Spirali Pasta (135g), Chicken thigh (150g), Green peas (60g)</p>
+        <p><b>Dinner:</b> Basmati Rice (80g), Basa Fillets (220g), Lettuce (80g)</p>
+        <p><b>Snacks:</b> Sultana Bran Buds (45g), Soy and Almond milk (150ml)</p>
+    </div>
+
+    <!-- Breakfast Decision -->
+    <div id="breakfastDecision" class="hidden">
+        <h3>What kind of breakfast base do you want?</h3>
+        <button onclick="showSection('breakfastRice')">Rice</button>
+        <button onclick="showSection('breakfastBreadRoti')">Bread/Roti</button>
+        <button onclick="showSection('breakfastCereal')">Cereal</button>
+        <button onclick="showSection('breakfastBagel')">Bagel</button>
+    </div>
+
+    <!-- Breakfast Options -->
+    <div id="breakfastRice" class="hidden">
+        <h3>Rice Breakfast: Chicken or Egg Whites?</h3>
+        <button onclick="showMeal('breakfast', 'Rice with Chicken')">Chicken</button>
+        <button onclick="showMeal('breakfast', 'Rice with Egg Whites')">Egg Whites</button>
+    </div>
+
+    <div id="breakfastBreadRoti" class="hidden">
+        <h3>Bread/Roti Breakfast: Bread or Roti?</h3>
+        <button onclick="showSection('breakfastBread')">Bread</button>
+        <button onclick="showMeal('breakfast', 'Roti')">Roti</button>
+    </div>
+
+    <div id="breakfastBread" class="hidden">
+        <h3>Bread Breakfast: Wholemeal or White?</h3>
+        <button onclick="showMeal('breakfast', 'Wholemeal Bread')">Wholemeal</button>
+    </div>
+
+    <div id="breakfastCereal" class="hidden">
+        <h3>Cereal Breakfast: Weetbix or Sultana Bran Buds?</h3>
+        <button onclick="showMeal('breakfast', 'Weetbix')">Weetbix</button>
+    </div>
+
+    <div id="breakfastBagel" class="hidden">
+        <h3>Bagel Breakfast</h3>
+        <p>Have Bakers Life - Plain Bagels (100-120g) and sunny queen farms - 100% egg whites (220-250g).</p>
+    </div>
+
+    <!-- Lunch Decision -->
+    <div id="lunchDecision" class="hidden">
+        <h3>What kind of lunch base do you want?</h3>
+        <button onclick="showSection('lunchRice')">Rice</button>
+        <button onclick="showSection('lunchPasta')">Pasta</button>
+    </div>
+
+    <!-- Lunch Options -->
+    <div id="lunchRice" class="hidden">
+        <h3>Rice Lunch: Chicken, Fish, or Tuna?</h3>
+        <button onclick="showMeal('lunch', 'Rice with Chicken')">Chicken</button>
+        <button onclick="showMeal('lunch', 'Rice with Fish')">Fish</button>
+        <button onclick="showMeal('lunch', 'Rice with Tuna')">Tuna</button>
+    </div>
+
+    <div id="lunchPasta" class="hidden">
+        <h3>Pasta Lunch: Chicken, Tuna, or Fish?</h3>
+        <button onclick="showMeal('lunch', 'Pasta with Chicken')">Chicken</button>
+        <button onclick="showMeal('lunch', 'Pasta with Tuna')">Tuna</button>
+    </div>
+
+    <!-- Dinner Decision -->
+    <div id="dinnerDecision" class="hidden">
+        <h3>What kind of dinner base do you want?</h3>
+        <button onclick="showSection('dinnerRice')">Rice</button>
+        <button onclick="showSection('dinnerPasta')">Pasta</button>
+        <button onclick="showSection('dinnerPotato')">Potato</button>
+    </div>
+
+    <!-- Dinner Options -->
+    <div id="dinnerRice" class="hidden">
+        <h3>Rice Dinner: Fish or Tuna?</h3>
+        <button onclick="showMeal('dinner', 'Rice with Fish')">Fish</button>
+        <button onclick="showMeal('dinner', 'Rice with Tuna')">Tuna</button>
+    </div>
+
+    <div id="dinnerPasta" class="hidden">
+        <h3>Pasta Dinner: Fish or Chicken?</h3>
+        <button onclick="showMeal('dinner', 'Pasta with Fish')">Fish</button>
+        <button onclick="showMeal('dinner', 'Pasta with Chicken')">Chicken</button>
+    </div>
+
+    <div id="dinnerPotato" class="hidden">
+        <h3>Potato Dinner</h3>
+        <p>Prepare Generic - Cooked Potato (200-250g) and The Fishmonger - Basa Fillets Skin Off (150-180g). You can add Natural - Cashews (10-15g), Lettuce (50g), Onion (50g), or Broccoli (80g).</p>
+    </div>
+
+    <!-- Snacks Decision -->
+    <div id="snacksDecision" class="hidden">
+        <h3>What kind of snack are you in the mood for?</h3>
+        <button onclick="showMeal('snacks', 'Cereal')">Cereal</button>
+        <button onclick="showSection('snacksBread')">Bread</button>
+        <button onclick="showMeal('snacks', 'Protein Bar')">Protein Bar</button>
+        <button onclick="showMeal('snacks', 'Biscuits/Rice Cakes')">Biscuits/Rice Cakes</button>
+        <button onclick="showMeal('snacks', 'Fruit')">Fruit</button>
+    </div>
+
+    <!-- Snack Options -->
+    <div id="snacksBread" class="hidden">
+        <h3>Bread Snack: White or Wholemeal?</h3>
+        <button onclick="showMeal('snacks', 'White Bread')">White</button>
+    </div>
+
+    <!-- Meal Display (For custom meal choices) -->
+    <div id="mealDisplay" class="hidden">
+        <h3 id="mealType"></h3>
+        <p id="mealDescription"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

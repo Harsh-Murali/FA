@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.meal-plan {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
